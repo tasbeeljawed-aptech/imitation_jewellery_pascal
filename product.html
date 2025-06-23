@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pascal Imitation Jewellery - Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #000;
+      color: #f5f5f5;
+    }
+
+    .navbar, .footer {
+      background-color: #000;
+    }
+
+    .navbar-brand, .nav-link, .footer {
+      color: #d4af37 !important;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 15px;
+    }
+
+    .card {
+      background-color: #111;
+      border: 1px solid #d4af37;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-title {
+      color: #d4af37;
+    }
+
+    select.form-select {
+      background-color: #111;
+      color: #d4af37;
+      border: 1px solid #d4af37;
+    }
+
+    .compare-btn {
+      background-color: #d4af37;
+      color: #000;
+      margin-top: 10px;
+    }
+
+    #compareSection {
+      margin-top: 40px;
+      display: none;
+    }
+
+    .compare-card {
+      background-color: #1c1c1c;
+      border: 1px solid #d4af37;
+    }
+
+    .form-check-input:checked {
+      background-color: #d4af37;
+      border-color: #d4af37;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand mx-auto d-flex align-items-center" href="index.html" style="gap: 10px;">
+      <img src="images/logo.jpeg" alt="Pascal Logo"
+        style="height: 100px; object-fit: contain;" />
+      <span class="h4 mb-0" style="color: #d4af37; font-weight: 600;">Pascal Jewellery</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="product.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Filters -->
+  <div class="container my-5">
+    <h2 style="color: #d4af37;">Our Products</h2>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="brandSelect" class="form-label" style="color: #d4af37;">Select Brand</label>
+        <select id="brandSelect" class="form-select">
+          <option value="all">All Brands</option>
+          <option value="NovaStone">NovaStone</option>
+          <option value="Zari & co">Zari & co</option>
+          <option value="Tiffany">Tiffany</option>
+        </select>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="typeSelect" class="form-label" style="color: #d4af37;">Select Type</label>
+        <select id="typeSelect" class="form-select">
+          <option value="all">All Types</option>
+          <option value="original">Original</option>
+          <option value="semi-precious">Semi-Precious</option>
+          <option value="artificial">Artificial</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="row" id="productGrid">
+      <!-- Product Card Template -->
+       <!-- original -->
+      <div class="col-md-4 mb-4" data-brand="NovaStone" data-type="original">
+        <div class="card h-100 text-center text-white">
+          <img src="images/original2.jpeg" class="card-img-top" alt="Original Jewellery">
+          <div class="card-body">
+            <h5 class="card-title">Elegant Sapphire Drop Set</h5>
+            <p class="card-text">Stunning Set Featuring a gold tone necklace and matching earrings.</p>
+            <div class="form-check">
+              <input class="form-check-input compare-checkbox" type="checkbox" value="Original - NovaStone" data-desc="High-end imitation jewelry replicating real gold.">
+              <label class="form-check-label">Compare</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-brand="NovaStone" data-type="original">
+        <div class="card h-100 text-center text-white">
+          <img src="images/artificialG5.jpeg" class="card-img-top" alt="Original Jewellery">
+          <div class="card-body">
+            <h5 class="card-title">Royal Blue Glam Set</h5>
+            <p class="card-text">Featuring deep blue accents and intricate designs.</p>
+            <div class="form-check">
+              <input class="form-check-input compare-checkbox" type="checkbox" value="Original - NovaStone" data-desc="High-end imitation jewelry replicating real gold.">
+              <label class="form-check-label">Compare</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-brand="NovaStone" data-type="original">
+        <div class="card h-100 text-center text-white">
+          <img src="images/artificialG8.jpeg" class="card-img-top" alt="Original Jewellery">
+          <div class="card-body">
+            <h5 class="card-title">Royal Green Set</h5>
+            <p class="card-text">A stunning fusion of gold and emerald tones,perfect for festive ocassions.</p>
+            <div class="form-check">
+              <input class="form-check-input compare-checkbox" type="checkbox" value="Original - NovaStone" data-desc="High-end imitation jewelry replicating real gold.">
+              <label class="form-check-label">Compare</label>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- semi precious -->
+      <div class="col-md-4 mb-4" data-brand="Zari & co" data-type="semi-precious">
+        <div class="card h-100 text-center text-white">
+          <img src="images/precious11.jpeg" class="card-img-top" alt="Semi-Precious Jewellery">
+          <div class="card-body">
+            <h5 class="card-title">Royal Blue jewelry Set</h5>
+            <p class="card-text">A luxurious blue zircon set, ideal for weddings and festive occasions.</p>
+            <div class="form-check">
+              <input class="form-check-input compare-checkbox" type="checkbox" value="Semi-Precious - Zari & co" data-desc="Gemstone-based artistic designs.">
+              <label class="form-check-label">Compare</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-brand="Zari & co" data-type="semi-precious">
+        <div class="card h-100 text-center text-white">
+          <img src="images/precious3.jpeg" class="card-img-top" alt="Semi-Precious Jewellery" style="height: 352px;">
+          <div class="card-body">
+            <h5 class="card-title">Crystal Charm Bracelet</h5>
+            <p class="card-text">A playful mix of crystals and charms ideal for party look.</p>
+            <div class="form-check">
+              <input class="form-check-input compare-checkbox" type="checkbox" value="Semi-Precious - Zari & co" data-desc="Gemstone-based artistic designs.">
+              <label class="form-check-label">Compare</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-brand="Zari & co" data-type="semi-precious">
+        <div class="card h-100 text-center text-white">
+          <img src="images/precious9.jpeg" class="card-img-top" alt="Semi-Precious Jewellery">
+          <div class="card-body">
+            <h5 class="card-title">Snowflakes inspired Rings</h5>
+            <p class="card-text">Unique Snowflakes style zircon ring for a cool and classy vibes.</p>
+            <div class="form-check">
+              <input class="form-check-input compare-checkbox" type="checkbox" value="Semi-Precious - Zari & co" data-desc="Gemstone-based artistic designs.">
+              <label class="form-check-label">Compare</label>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- artificial -->
+      <div class="col-md-4 mb-4" data-brand="Tiffany" data-type="artificial">
+        <div class="card h-100 text-center text-white">
+          <img src="images/artificialG6.jpeg" class="card-img-top" alt="Artificial Jewellery">
+          <div class="card-body">
+            <h5 class="card-title">Classic Bridal Set</h5>
+            <p class="card-text">A complete ensemble with layerd pearls and bold details,perfect for wedding and festive occasions.</p>
+            <div class="form-check">
+              <input class="form-check-input compare-checkbox" type="checkbox" value="Artificial - Tiffany" data-desc="Trendy, affordable accessories.">
+              <label class="form-check-label">Compare</label>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-4 mb-4" data-brand="Tiffany" data-type="artificial">
+        <div class="card h-100 text-center text-white">
+          <img src="images/artificialG11.jpeg" class="card-img-top" alt="Artificial Jewellery" style="height: 470px;">
+          <div class="card-body">
+            <h5 class="card-title">Classic Ethnic Statement Set</h5>
+            <p class="card-text">Gold toned bracelets encrusted with clear crystals.</p>
+            <div class="form-check">
+              <input class="form-check-input compare-checkbox" type="checkbox" value="Artificial - Tiffany" data-desc="Trendy, affordable accessories.">
+              <label class="form-check-label">Compare</label>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-4 mb-4" data-brand="Tiffany" data-type="artificial">
+        <div class="card h-100 text-center text-white">
+          <img src="images/aritificialG12.jpeg" class="card-img-top" alt="Artificial Jewellery">
+          <div class="card-body">
+            <h5 class="card-title">sparkling Crystal Bracelets</h5>
+            <p class="card-text">Gold toned bracelets encrusted with clear crystals</p>
+            <div class="form-check">
+              <input class="form-check-input compare-checkbox" type="checkbox" value="Artificial - Tiffany" data-desc="Trendy, affordable accessories.">
+              <label class="form-check-label">Compare</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn compare-btn" id="compareBtn">Compare Selected</button>
+
+    <!-- Comparison Section -->
+    <div id="compareSection" class="row mt-4">
+  <h4 style="color: white;">Comparison Result</h4>
+  <div class="col-md-6">
+    <div class="card compare-card p-3 text-white" id="compare1"></div>
+  </div>
+  <div class="col-md-6">
+    <div class="card compare-card p-3 text-white" id="compare2"></div>
+  </div>
+</div>
+
+
+  </div>
+
+  <!-- Footer -->
+   <footer class="py-4 mt-5" style="background-color:black;color:goldenrod">
+    <div class="container">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="index.html" class="nav-link px-2" style="color:goldenrod">Home</a></li>
+        <li class="nav-item"><a href="product.html" class="nav-link px-2" style="color:goldenrod">Products</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link px-2" style="color:goldenrod">Gallery</a></li>
+        <li class="nav-item"><a href="aboutus.html" class="nav-link px-2" style="color:goldenrod">About Us</a></li>
+        <li class="nav-item"><a href="feedback.html" class="nav-link px-2" style="color:goldenrod">Feedback</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link px-2" style="color:goldenrod">Contact Us</a></li>
+      </ul>
+      <p class="text-center mb-0">© 2025 Pascal Imitation Jewellery. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const brandSelect = document.getElementById("brandSelect");
+      const typeSelect = document.getElementById("typeSelect");
+      const cards = document.querySelectorAll(".col-md-4[data-brand][data-type]");
+
+      function filterCards() {
+        const selectedBrand = brandSelect.value.toLowerCase();
+        const selectedType = typeSelect.value.toLowerCase();
+
+        cards.forEach(card => {
+          const cardBrand = card.getAttribute("data-brand").toLowerCase();
+          const cardType = card.getAttribute("data-type").toLowerCase();
+
+          const matchesBrand = selectedBrand === "all" || cardBrand === selectedBrand;
+          const matchesType = selectedType === "all" || cardType === selectedType;
+
+          card.style.display = matchesBrand && matchesType ? "block" : "none";
+        });
+      }
+
+      brandSelect.addEventListener("change", filterCards);
+      typeSelect.addEventListener("change", filterCards);
+
+      // Compare Feature
+      const compareBtn = document.getElementById("compareBtn");
+      const compareSection = document.getElementById("compareSection");
+      const compareBoxes = document.querySelectorAll(".compare-checkbox");
+
+      compareBtn.addEventListener("click", function () {
+        const checked = Array.from(compareBoxes).filter(c => c.checked);
+        if (checked.length !== 2) {
+          alert("Please select exactly 2 products to compare.");
+          return;
+        }
+
+        document.getElementById("compare1").innerHTML = `<h5>${checked[0].value}</h5><p>${checked[0].dataset.desc}</p>`;
+        document.getElementById("compare2").innerHTML = `<h5>${checked[1].value}</h5><p>${checked[1].dataset.desc}</p>`;
+        compareSection.style.display = "flex";
+      });
+    });
+  </script>
+</body>
+</html>
